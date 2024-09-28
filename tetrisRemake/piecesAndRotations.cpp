@@ -1,8 +1,7 @@
-int[][][] getPiece(int pieceSelect) {
-	switch (pieceSelect) {
+// Piece types
+int pieces[7][4][5][5] = {
 		// I piece
-		case 0:
-			return {
+			 {
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 },
@@ -31,10 +30,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 1, 0, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// L piece
-		case 1:
-			return {
+			 {
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 1, 0, 0 },
@@ -63,10 +61,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// Mirror L piece
-		case 2:
-			return {
+			{
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 1, 0, 0 },
@@ -95,10 +92,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 0, 1, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// N piece
-		case 3:
-			return {
+			{
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 1, 0 },
@@ -127,10 +123,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// Mirror N piece
-		case 4:
-			return {
+			{
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 1, 0, 0 },
@@ -159,10 +154,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// T piece
-		case 5:
-			return {
+			{
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 1, 0, 0 },
@@ -191,10 +185,9 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			},
 		// square piece
-		default:
-			return { 
+			{ 
 				{
 					{ 0, 0, 0, 0, 0 },
 					{ 0, 0, 0, 0, 0 },
@@ -223,8 +216,58 @@ int[][][] getPiece(int pieceSelect) {
 					{ 0, 0, 1, 1, 0 },
 					{ 0, 0, 0, 0, 0 }
 				}
-			};
+			}
+};
+
+// Starting Positions for Pieces
+int initialPiecePositons[7][4][2] = {
+	// I
+	{
+		{-2, -2},
+		{-2, -3},
+		{-2, -2},
+		{-2, -3},
+	},
+	// L piece
+	{
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
+		{-2, -2},
+	},
+	// Mirror L piece
+	{
+		{-2, -3},
+		{-2, -2},
+		{-2, -3},
+		{-2, -3},
+	},
+	// N piece
+	{
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
+		{-2, -2},
+	},
+	// Mirror N piece
+	{
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
+		{-2, -2},
+	},
+	// T piece
+	{
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
+		{-2, -2},
+	},
+	// square piece
+	{
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
+		{-2, -3},
 	}
 }
-
- 
